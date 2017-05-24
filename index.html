@@ -3,21 +3,40 @@
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
     <script src="build/js/vendor.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/styles.css">
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Bike Info</title>
   </head>
   <body>
     <div class="container">
-      <h2>Search stolen bikes by city:</h2>
-      <form id='bikeForm'>
-        <label for="city">City:</label>
-        <input type="text" name="city" id="city">
-        <button type="submit" name="button">Search</button>
-      </form>
-      <div>
+      <div class="header">
+        <h1>EYE-CYCLE</h1>
+      </div>
+      <div class="row well">
+        <div class="col-xs-6">
+          <h2>Search stolen bikes by city:</h2>
+          <p>Help stop bike thieves! Search your area, and keep an eye out for these bikes!</p>
+          <form id='bikeForm'>
+            <label for="city">City:</label>
+            <input type="text" name="city" id="city">
+            <button type="submit" name="button">Search</button>
+          </form>
+        </div>
+        <div class="col-xs-6">
+          <h5>Powered by:</h5>
+          <a href="https://bikeindex.org/" target="_blank"><img src="/img/bikeindex.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="col-xs-6">
         <ul class='return'>
 
         </ul>
+      </div>
+      <div class="col-xs-6">
+        <a class="twitter-timeline"  href="https://twitter.com/hashtag/StolenBike" data-widget-id="867477858364477440">#StolenBike Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
       </div>
 
 
