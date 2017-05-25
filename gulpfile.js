@@ -10,6 +10,7 @@ var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var buildProduction = utilities.env.production;
+var Twit = require('twit')
 
 var lib = require('bower-files')({
   "overrides":{
@@ -21,6 +22,13 @@ var lib = require('bower-files')({
       ]
     }
   }
+});
+var twitter = require('gulp-twitter');
+
+
+gulp.task('tweetie', function () {
+    return gulp.src('package.json')
+           .pipe(twitter(oauth, 'Watch me while I tweet this.'));
 });
 
 gulp.task('jsBrowserify', ['concatInterface'], function() {
@@ -58,7 +66,7 @@ gulp.task('cssBuild', function() {
     .pipe(sass())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/css'));
-    
+
 });
 
 gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
